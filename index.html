@@ -7,19 +7,16 @@
     <title>SSAS Public School</title>
 </head>
 <body>
-    <!-- School name header -->
     <header>
-        <h1 class="school-name">SSAS Public School</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
     <main>
         <section id="home">
@@ -31,6 +28,19 @@
     <footer>
         <p>&copy; 2023 SSAS Public School</p>
     </footer>
+
+    <script>
+        // JavaScript to update URLs without ".html" extension
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll("nav a");
+            for (const link of links) {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const href = this.getAttribute("href");
+                    history.pushState({}, "", href);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
-
