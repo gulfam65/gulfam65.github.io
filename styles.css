@@ -1,0 +1,68 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #0073e6;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+.contact-info {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Gallery Styles */
+#gallery {
+    background
