@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add styles for the gallery section */
+        section#gallery {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        /* Style for gallery images */
+        #image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 10px; /* Gap between images */
+        }
+
+        #image-container img {
+            max-width: 100%; /* Ensure images don't exceed container width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
     <title>Gallery - SSAS Public School</title>
 </head>
 <body>
@@ -21,41 +42,19 @@
     <main>
         <section id="gallery">
             <h2>Photo Gallery</h2>
-            <!-- Add your gallery images here -->
+            <div id="image-container">
+                <!-- Add your gallery images here -->
+                <img src="https://swachhbharat.mygov.in/system/storage/serve/315083/IMG_20160130_091300_HDR.jpg%3Fitok%3D1?itok=fxcErJ-D" alt="Gallery Image">
+                <img src="https://www.joonsquare.com/usermanage/image/business/n-s-public-school-bagpat-1853/n-s-public-school-bagpat-ns-school-1.jpg" alt="Gallery Image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzTZXa7_I4jLLWETsFoAiC9Dkh6uh1jKNzmw&usqp=CAU" alt="Gallery Image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7V2JYZ5BDSSz-9d5SbpMsNbDNVVmpNUq_h3DfvQeUSr6yKWGiVMwusWvTBIeLBcTK1dQ&usqp=CAU" alt="Gallery Image">
+                <img src="https://cache.careers360.mobi/media/schools/social-media/media-gallery/20231/2019/7/5/Vidya%20Bhawan%20Public%20School-Awards.jpg" alt="Gallery Image">
+                <img src="https://www.yayskool.com/images/school/vidya-bhawan-public-school-baghpat-69755619.png" alt="Gallery Image">
+                <img src="https://www.joonsquare.com/usermanage/image/business/vidya-bhawan-public-school-bagpat-1856/vidya-bhawan-public-school-bagpat-vidya-4.jpg" alt="Gallery Image">
+            </div>
         </section>
     </main>
-    <script>
-    // Array of image links
-    const imageLinks = [
-        'https://swachhbharat.mygov.in/system/storage/serve/315083/IMG_20160130_091300_HDR.jpg%3Fitok%3D1?itok=fxcErJ-D',
-        'https://www.joonsquare.com/usermanage/image/business/n-s-public-school-bagpat-1853/n-s-public-school-bagpat-ns-school-1.jpg',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzTZXa7_I4jLLWETsFoAiC9Dkh6uh1jKNzmw&usqp=CAU',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7V2JYZ5BDSSz-9d5SbpMsNbDNVVmpNUq_h3DfvQeUSr6yKWGiVMwusWvTBIeLBcTK1dQ&usqp=CAU',
-        'https://cache.careers360.mobi/media/schools/social-media/media-gallery/20231/2019/7/5/Vidya%20Bhawan%20Public%20School-Awards.jpg',
-        'https://www.yayskool.com/images/school/vidya-bhawan-public-school-baghpat-69755619.png',
-        'https://www.joonsquare.com/usermanage/image/business/vidya-bhawan-public-school-bagpat-1856/vidya-bhawan-public-school-bagpat-vidya-4.jpg',
-    ];
 
-    // Function to shuffle the image links
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    }
-
-    // Shuffle the image links
-    shuffleArray(imageLinks);
-
-    // Load images into the container
-    const imageContainer = document.getElementById('image-container');
-    imageLinks.forEach(link => {
-        const img = document.createElement('img');
-        img.src = link;
-        img.alt = 'Gallery Image';
-        imageContainer.appendChild(img);
-    });
-</script>
     <footer>
         <p>&copy; SSAS Public School</p>
     </footer>
