@@ -24,9 +24,40 @@
             <!-- Add your gallery images here -->
         </section>
     </main>
+    <script>
+    // Array of image links
+    const imageLinks = [
+        'https://swachhbharat.mygov.in/system/storage/serve/315083/IMG_20160130_091300_HDR.jpg%3Fitok%3D1?itok=fxcErJ-D',
+        'https://www.joonsquare.com/usermanage/image/business/n-s-public-school-bagpat-1853/n-s-public-school-bagpat-ns-school-1.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzTZXa7_I4jLLWETsFoAiC9Dkh6uh1jKNzmw&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7V2JYZ5BDSSz-9d5SbpMsNbDNVVmpNUq_h3DfvQeUSr6yKWGiVMwusWvTBIeLBcTK1dQ&usqp=CAU',
+        'https://cache.careers360.mobi/media/schools/social-media/media-gallery/20231/2019/7/5/Vidya%20Bhawan%20Public%20School-Awards.jpg',
+        'https://www.yayskool.com/images/school/vidya-bhawan-public-school-baghpat-69755619.png',
+        'https://www.joonsquare.com/usermanage/image/business/vidya-bhawan-public-school-bagpat-1856/vidya-bhawan-public-school-bagpat-vidya-4.jpg',
+    ];
 
+    // Function to shuffle the image links
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Shuffle the image links
+    shuffleArray(imageLinks);
+
+    // Load images into the container
+    const imageContainer = document.getElementById('image-container');
+    imageLinks.forEach(link => {
+        const img = document.createElement('img');
+        img.src = link;
+        img.alt = 'Gallery Image';
+        imageContainer.appendChild(img);
+    });
+</script>
     <footer>
-        <p>&copy; 2023 SSAS Public School</p>
+        <p>&copy; SSAS Public School</p>
     </footer>
 </body>
 </html>
